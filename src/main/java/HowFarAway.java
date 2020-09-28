@@ -16,7 +16,11 @@ public class HowFarAway
         endLat = scanner.nextDouble();
         System.out.print("Enter the longitude of the ending location: ");
         endLong = scanner.nextDouble();
-        //System.out.print("The distance is " + distance + " miles.");
+
+        GeoLocation geoLocSt = new GeoLocation(startLat, startLong);
+        GeoLocation geoLocEnd = new GeoLocation(endLat, endLong);
+        distance = geoLocSt.distanceFrom(geoLocEnd);
+        System.out.print("The distance is " + distance + " miles.");
 
       }
 }
